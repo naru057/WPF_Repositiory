@@ -3,10 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MyCalculator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        xmlns:local="clr-namespace:MyCalculator" 
+		xmlns:views="clr-namespace:MyCalculator.Views"
+		xmlns:commands="clr-namespace:MyCalculator.Command"
+		mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="800">
+    <Grid Margin="3">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="600"/>
+		</Grid.ColumnDefinitions>
 
-    </Grid>
+		<Grid Grid.Row="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="20"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+		
+			<views:CalculatorInputView Grid.Row="1"/>
+		</Grid>
+		
+		
+	</Grid>
 </Window>
